@@ -20,4 +20,9 @@ export class CoreService {
   personService(): Observable<Person> {
     return this.http.get<Person>(this.urlPerson);
   }
+
+  getData<T>(url: string): Observable<T> {
+    return this.http.get<T>(url);
+  }
+
 }
