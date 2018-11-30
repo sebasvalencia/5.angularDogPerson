@@ -1,3 +1,5 @@
+import { PersonModule } from './person/person.module';
+import { DogModule } from './dog/dog.module';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
@@ -5,18 +7,17 @@ import { HttpClientModule } from '@angular/common/http';
 
 
 import { AppComponent } from './app.component';
-import { DogComponent } from './dog/dog.component';
 import { PersonComponent } from './person/person.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DogComponent,
-    PersonComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    DogModule,
+    PersonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
